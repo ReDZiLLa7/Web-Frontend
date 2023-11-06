@@ -59,7 +59,7 @@ header
 	position: relative;
 	height: 600px;
 	width: 100%;
-	background-image: url("https://redzilla7.github.io/Web-Frontend/Lab3/MainCarousel.jpeg");
+	background-image: url(https://redzilla7.github.io/Web-Frontend/Lab3/MainCarousel.jpeg);
 	background-position: center;
 }
 
