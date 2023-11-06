@@ -6,3 +6,5 @@
 https://redzilla7.github.io/Web-Frontend/Lab1/index.html
 
 https://redzilla7.github.io/Web-Frontend/Lab2/index.html
+
+https://redzilla7.github.io/Web-Frontend/Lab3/index.html
