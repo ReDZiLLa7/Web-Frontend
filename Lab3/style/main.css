@@ -66,11 +66,6 @@ header
     display: none;
 }
 
-.menu-items br
-{
-    display: none;
-}
-
 .menu .mobile-menu
 {
     display: none;
@@ -210,6 +205,10 @@ a:hover
         transform: translateY(-20px);
         transition: opacity 0.5s, transform 0.5s;
     }
+    .menu-items .close-menu
+    {
+        display: block;
+    }
     .menu-items.active
     {
         display: block;
@@ -276,7 +275,6 @@ a:hover
         scroll-snap-align: start;
         box-sizing: border-box;
         margin: 0;
-        padding: 1.5rem;
     }
     /*.mobile-menu-icon !* Временно *!*/
     /*{*/
