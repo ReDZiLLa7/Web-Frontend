@@ -15,6 +15,11 @@ body
 
 header
 {
+    /* Для 3ей лабы */
+    position: sticky;
+    background-color: #FFFFFF;
+    z-index: 1;
+    top: 0;
 	width: 100%;
 }
 
@@ -23,16 +28,14 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 0 1.5rem;
+    width: auto;
+    margin: 0 2.5rem;
 }
 
 .info div
 {
     text-align: center;
     width: 100%;
-    margin: 0 0.5rem;
-    padding: 0.5rem;
 }
 
 .menu
@@ -117,6 +120,12 @@ a:hover
   text-decoration: underline;
 }
 
+.logo
+{
+    margin-right: 1.75rem;
+    padding: 0.75rem 0.75rem 0.75rem 0;
+}
+
 .logo img
 {
 	height: 100%;
@@ -131,23 +140,29 @@ a:hover
 
 .advantages .items 
 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
 }
 
 .advantages .items .item
 {
-    position: relative;
+    display: flex;
+    align-items: center;
   	width: 100%;
 	margin-right: 1.5rem;
 }
 
 .advantages .items .item .item-img
 {
-    position: absolute;
-	margin-right: 3.75rem;
+	margin-right: 1rem;
+}
+
+.advantages .items .item .flex-column
+{
+    display: flex;
+    flex-direction: column;
 }
 
 .advantages .items .item .name
@@ -156,21 +171,19 @@ a:hover
 	font-weight: 600;
     line-height: 1.25rem;
     text-transform: uppercase;
-    margin-left: 4.5rem;
 }
 
 .advantages .items .item .desc
 {
     font-size: 0.875rem;
 	line-height: 1.25rem;
-    margin-left: 4.5rem;
 }
 
 @media (max-width: 518px) /* телефоны */
 {
     .info
     {
-        padding: 0;
+        padding: 0.5rem;
     }
     .info div
     {
@@ -245,22 +258,7 @@ a:hover
     }
     .advantages
     {
-        height: 10rem;
-    }
-    .advantages .items .item .item-img img
-    {
-        height: auto;
-        width: auto;
-    }
-    .advantages .items .item .name
-    {
-        line-height: 1rem;
-        margin-left: 5rem;
-    }
-    .advantages .items .item .desc
-    {
-        line-height: 1rem;
-        margin-left: 5rem;
+        height: 12rem;
     }
     .advantages .items
     {
@@ -271,10 +269,39 @@ a:hover
     }
     .advantages .items .item
     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex: 0 0 auto;
         scroll-snap-align: start;
         box-sizing: border-box;
         margin: 0;
+    }
+    .advantages .items .item .item-img
+    {
+        position: unset;
+        margin-right: 0;
+    }
+    .advantages .items .item .item-img img
+    {
+        height: auto;
+        width: auto;
+    }
+    .advantages .items .item .flex-column
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 1rem 1.5rem;
+    }
+    .advantages .items .item .name
+    {
+        line-height: 1rem;
+        margin-left: 0;
+    }
+    .advantages .items .item .desc
+    {
+        line-height: 1rem;
+        margin-left: 0;
     }
     /*.mobile-menu-icon !* Временно *!*/
     /*{*/
@@ -357,23 +384,7 @@ a:hover
     }
     .advantages
     {
-        height: 10rem;
-    }
-    .advantages .items .item .item-img img
-    {
-        height: auto;
-        width: auto;
-        margin-left: 4rem;
-    }
-    .advantages .items .item .name
-    {
-        line-height: 1rem;
-        margin-left: 9rem;
-    }
-    .advantages .items .item .desc
-    {
-        line-height: 1rem;
-        margin-left: 9rem;
+        height: 12rem;
     }
     .advantages .items
     {
@@ -384,11 +395,41 @@ a:hover
     }
     .advantages .items .item
     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex: 0 0 auto;
         scroll-snap-align: start;
         box-sizing: border-box;
         margin: 0;
         padding: 1.5rem;
+    }
+    .advantages .items .item .item-img
+    {
+        position: unset;
+        margin-right: 0;
+    }
+    .advantages .items .item .item-img img
+    {
+        height: auto;
+        width: auto;
+        margin-right: 0;
+    }
+    .advantages .items .item .flex-column
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 1rem 1.5rem;
+    }
+    .advantages .items .item .name
+    {
+        line-height: 1rem;
+        margin-left: 0;
+    }
+    .advantages .items .item .desc
+    {
+        line-height: 1rem;
+        margin-left: 0;
     }
 }
 
@@ -441,25 +482,7 @@ a:hover
     }
     .advantages
     {
-        height: 10rem;
-    }
-    .advantages .items .item .item-img img
-    {
-        height: auto;
-        width: auto;
-        margin-left: 7rem;
-    }
-    .advantages .items .item .name
-    {
-        font-size: 1rem;
-        line-height: 1.25rem;
-        margin-left: 12rem;
-    }
-    .advantages .items .item .desc
-    {
-        font-size: 0.85rem;
-        line-height: 1.25rem;
-        margin-left: 12rem;
+        height: 12rem;
     }
     .advantages .items
     {
@@ -470,10 +493,42 @@ a:hover
     }
     .advantages .items .item
     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex: 0 0 auto;
         scroll-snap-align: start;
         box-sizing: border-box;
         margin: 0;
         padding: 1.5rem;
+    }
+    .advantages .items .item .item-img
+    {
+        position: unset;
+        margin-right: 0;
+    }
+    .advantages .items .item .item-img img
+    {
+        height: auto;
+        width: auto;
+        margin-right: 0;
+    }
+    .advantages .items .item .flex-column
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 1rem 1.5rem;
+    }
+    .advantages .items .item .name
+    {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-left: 0;
+    }
+    .advantages .items .item .desc
+    {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-left: 0;
     }
 }
