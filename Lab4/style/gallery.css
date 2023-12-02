@@ -1,0 +1,86 @@
+body
+{
+  font-size: 1rem;
+}
+
+footer
+{
+  margin: 2.5rem;
+}
+
+article
+{
+  margin: 0 2.5rem;
+}
+
+table
+{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  max-width: 100%;
+  margin: 0 2.5rem;
+}
+
+thead
+{
+  display: contents;
+}
+
+thead th
+{
+  color: #FFFFFF;
+  background-color: #424242;
+}
+
+tbody, tr
+{
+  display: contents;
+}
+
+th, td 
+{
+  text-align: center;
+  border: 1px solid #000;
+  padding: 0.625rem;
+}
+
+tbody tr:nth-child(even) td 
+{
+    color: #FFFFFF;
+    background-color: #B31145;
+}
+
+tbody tr:nth-child(odd) td
+{
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 518px) /* телефоны */
+{
+  table
+  {
+    font-size: 0.625rem;
+    grid-template-columns: repeat(5, minmax(75px, 1fr));
+    margin: 0;
+  }
+}
+
+@media (min-width: 518px) and (max-width: 751px) /* планшеты */
+{
+  table
+  {
+    font-size: 1rem;
+    grid-template-columns: repeat(5, minmax(75px, 1fr));
+    margin: 0;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1100px) /* планшеты или ноуты */
+{
+  table
+  {
+    font-size: 1.125rem;
+    grid-template-columns: repeat(5, minmax(75px, 1fr));
+    margin: 0;
+  }
+}
