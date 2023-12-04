@@ -10,3 +10,5 @@ https://redzilla7.github.io/Web-Frontend/Lab2/index.html
 https://redzilla7.github.io/Web-Frontend/Lab3/index.html
 
 https://redzilla7.github.io/Web-Frontend/Lab4/index.html
+
+https://redzilla7.github.io/Web-Frontend/Lab5/index.html
