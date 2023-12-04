@@ -15,43 +15,68 @@ body
 
 header
 {
+    /* Для 3ей лабы */
+    position: sticky;
+    background-color: #FFFFFF;
+    z-index: 2;
+    top: 0;
 	width: 100%;
+}
+
+.info
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: 0 2.5rem;
+}
+
+.info div
+{
+    text-align: center;
+    width: 100%;
 }
 
 .menu
 {
 	display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 	background-color: #B31145;
-	margin: 0 5% 1.5%;
-	padding: 1.5%;
-	color: white;
+	margin: 0 2.5rem 1rem;
+	padding: 1.25rem;
 }
 
 .menu div
 {
-	display: flex;
-	align-items: center;
-  	justify-content: center;
-	width: 100%;
-	font-size: 1.0625rem;
-	font-weight: 600;
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 600;
 }
 
-.info
+.menu-items
 {
-	display: flex;
-	width: 100%;
-	padding: 0 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.info div
+.menu-items .close-menu
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	margin: 0 1.2%;
-	padding: 0.5%;
+    display: none;
+}
+
+.menu .mobile-menu
+{
+    display: none;
+}
+
+.hide-menu
+{
+    display: none !important;
 }
 
 .carousel
@@ -77,12 +102,6 @@ header
   	z-index: 1;
 }
 
-/*.carousel img
-{
-	height: 500px;
-	width: 100%;
-}*/
-
 a:link 
 {
   color: #FFF; 
@@ -101,6 +120,12 @@ a:hover
   text-decoration: underline;
 }
 
+.logo
+{
+    margin-right: 1.75rem;
+    padding: 0.75rem 0.75rem 0.75rem 0;
+}
+
 .logo img
 {
 	height: 100%;
@@ -109,165 +134,401 @@ a:hover
 
 .advantages
 {
-	display: flex;
-	margin: 2.5%;
+	margin: 1.5rem;
+    padding: 1rem;
 }
 
 .advantages .items 
 {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: 0 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
 }
 
 .advantages .items .item
 {
-	display: flex;
-	flex-direction: row;
-  	align-items: center;
+    display: flex;
+    align-items: center;
   	width: 100%;
-	margin-right: 3.5%;
+	margin-right: 1.5rem;
 }
 
 .advantages .items .item .item-img
 {
-	margin-right: 5%;
+	margin-right: 1rem;
+}
+
+.advantages .items .item .flex-column
+{
+    display: flex;
+    flex-direction: column;
 }
 
 .advantages .items .item .name
 {
-	display: inline-block;
+    font-size: 0.85rem;
 	font-weight: 600;
-    line-height: 1.625rem;
+    line-height: 1.25rem;
     text-transform: uppercase;
 }
 
 .advantages .items .item .desc
 {
-	display: inline-block;
-	line-height: 1.625rem;
+    font-size: 0.875rem;
+	line-height: 1.25rem;
 }
 
-@media (max-width: 480px) /* телефоны */
+@media (max-width: 518px) /* телефоны */
 {
-  .logo img
-  {
-  	height: 30px;
-  	width: 50px;
-  }
-  .info div 
-  {
-  	font-size: 0.25rem;
-    margin: 0 2px;
-  }
-  .menu div 
-  {
-    font-size: 0.25rem;
-  }
-  .carousel h1 
-  {
-    font-size: 0.5rem;
-    line-height: 0.625rem;
-  }
-  .advantages .items
-  {
-  	display: flex;
-  	justify-content: space-between;
-  }
-  .advantages .items .item 
-  {
-    width: 100%;
-    padding: 0 1.5%;
-  }
-  .advantages .items .item .item-img img
-  {
-    height: 30px;
-    width: 25px;
-  }
-  .advantages .items .item .name
-  {
-    font-size: 0.25rem;
-    line-height: 0.25rem;
-  }
-  .advantages .items .item .desc
-  {
-    font-size: 0.25rem;
-    line-height: 0.25rem;
-  }
+    .info
+    {
+        padding: 0.5rem;
+    }
+    .info div
+    {
+        margin: 0;
+        padding: 0;
+    }
+    .info .slogan
+    {
+        font-size: 0.75rem;
+    }
+    .info .phone, .email, .calculation
+    {
+        display: none;
+    }
+    .logo img
+    {
+        height: 100%;
+        width: 75%;
+    }
+    .menu
+    {
+        display: flex;
+        height: 100%;
+        width: 10rem;
+        margin: 0 0.45rem 0.45rem 2rem;
+        padding: 2%;
+    }
+    .menu-items
+    {
+        display: none;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+    .menu-items .close-menu
+    {
+        display: block;
+    }
+    .menu-items.active
+    {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        line-height: 1.5rem;
+    }
+    .menu-items.active .close-menu
+    {
+        font-weight: 600;
+        text-decoration: underline;
+    }
+    .menu div
+    {
+        font-weight: 400;
+    }
+    .menu .mobile-menu
+    {
+        display: block;
+        font-size: 1rem;
+        transition: width 0.5s ease-in;
+        margin: 0;
+        padding: 0;
+    }
+    .carousel
+    {
+        background-position: -280px -150px;
+        height: 23.5rem;
+        width: 100%;
+    }
+    .carousel h1
+    {
+        display: none;
+    }
+    .advantages
+    {
+        height: 12rem;
+    }
+    .advantages .items
+    {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .advantages .items .item
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .advantages .items .item .item-img
+    {
+        position: unset;
+        margin-right: 0;
+    }
+    .advantages .items .item .item-img img
+    {
+        height: auto;
+        width: auto;
+    }
+    .advantages .items .item .flex-column
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 1rem 1.5rem;
+    }
+    .advantages .items .item .name
+    {
+        line-height: 1rem;
+        margin-left: 0;
+    }
+    .advantages .items .item .desc
+    {
+        line-height: 1rem;
+        margin-left: 0;
+    }
+    /*.mobile-menu-icon !* Временно *!*/
+    /*{*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    width: 1.5rem;*/
+    /*    height: 1.5rem;*/
+    /*    position: relative;*/
+    /*    cursor: pointer;*/
+    /*    margin: 0;*/
+    /*    transform: rotate(0deg);*/
+    /*    transition: .5s ease-in-out;*/
+    /*}*/
+    /*.mobile-menu-icon span !* Временно *!*/
+    /*{*/
+    /*    display: block;*/
+    /*    position: absolute;*/
+    /*    height: 0.25rem;*/
+    /*    width: 80%;*/
+    /*    background: #FFFFFF;*/
+    /*    border-radius: 0.625rem;*/
+    /*    opacity: 1;*/
+    /*}*/
 }
 
-@media (min-width: 481px) and (max-width: 720px) /* планшеты */
+@media (min-width: 518px) and (max-width: 751px) /* планшеты */
 {
-  .info div
-  {
-  	font-size: 0.375rem;
-    margin: 0 2px;
-  }
-  .menu div
-  {
-    font-size: 0.375rem;
-  }
-  .carousel h1 
-  {
-    font-size: 0.75rem;
-    line-height: 0.875rem;
-  }
-  .advantages .items
-  {
-  	display: flex;
-  	justify-content: space-between;
-  }
-  .advantages .items .item .item-img img
-  {
-    height: 50px;
-    width: 40px;
-  }
-  .advantages .items .item .name
-  {
-    font-size: 0.4375rem;
-    line-height: 0.5rem;
-  }
-  .advantages .items .item .desc
-  {
-    font-size: 0.4375rem;
-    line-height: 0.5rem;
-  }
+    .logo img
+    {
+        height: 100%;
+        width: 100%;
+    }
+    .info
+    {
+        margin: 0;
+        padding: 0.5rem;
+    }
+    .info div
+    {
+        margin: 0;
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+    .phone strong, br
+    {
+        display: none;
+    }
+    .email strong, br
+    {
+        display: none;
+    }
+    .menu
+    {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+    .menu .close-menu
+    {
+        display: none;
+    }
+    .menu div
+    {
+        width: 100%;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    .carousel
+    {
+        background-position: -280px -150px;
+        height: 23.5rem;
+        width: 100%;
+    }
+    .carousel h1
+    {
+        width: 16rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        top: 15%;
+        left: 65%;
+    }
+    .advantages
+    {
+        height: 12rem;
+    }
+    .advantages .items
+    {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .advantages .items .item
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 1.5rem;
+    }
+    .advantages .items .item .item-img
+    {
+        position: unset;
+        margin-right: 0;
+    }
+    .advantages .items .item .item-img img
+    {
+        height: auto;
+        width: auto;
+        margin-right: 0;
+    }
+    .advantages .items .item .flex-column
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 1rem 1.5rem;
+    }
+    .advantages .items .item .name
+    {
+        line-height: 1rem;
+        margin-left: 0;
+    }
+    .advantages .items .item .desc
+    {
+        line-height: 1rem;
+        margin-left: 0;
+    }
 }
 
-@media (min-width: 721px) and (max-width: 1200px) /* планшеты */
+@media (min-width: 751px) and (max-width: 1100px) /* планшеты или ноуты */
 {
-  .menu
-  {
-  	padding: 1.5%;
-  }
-  .info div
-  {
-  	font-size: 0.625rem;
-    margin: 0 2px;
-  }
-  .menu div
-  {
-    font-size: 0.625rem;
-  }
-  .carousel h1 
-  {
-    font-size: 1rem;
-    line-height: 1.125rem;
-  }
-  .advantages .items .item .item-img img
-  {
-    height: 70px;
-    width: 60px;
-  }
-  .advantages .items .item .name
-  {
-    font-size: 0.75rem;
-    line-height: 0.75rem;
-  }
-  .advantages .items .item .desc
-  {
-    font-size: 0.625rem;
-    line-height: 0.625rem;
-  }
+    .logo img
+    {
+        height: 100%;
+        width: 100%;
+    }
+    .info
+    {
+        margin: 0;
+        padding: 0.5rem;
+    }
+    .info div
+    {
+        margin: 0;
+        padding: 0.25rem;
+        font-size: 0.875rem;
+    }
+    .menu
+    {
+        margin: 0.75rem;
+        padding: 0.75rem;
+    }
+    .menu .close-menu
+    {
+        display: none;
+    }
+    .menu div
+    {
+        width: 100%;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    .carousel
+    {
+        background-position: -280px -150px;
+        height: 23.5rem;
+        width: 100%;
+    }
+    .carousel h1
+    {
+        width: 16rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        top: 15%;
+        left: 45%;
+    }
+    .advantages
+    {
+        height: 12rem;
+    }
+    .advantages .items
+    {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .advantages .items .item
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 1.5rem;
+    }
+    .advantages .items .item .item-img
+    {
+        position: unset;
+        margin-right: 0;
+    }
+    .advantages .items .item .item-img img
+    {
+        height: auto;
+        width: auto;
+        margin-right: 0;
+    }
+    .advantages .items .item .flex-column
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 1rem 1.5rem;
+    }
+    .advantages .items .item .name
+    {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-left: 0;
+    }
+    .advantages .items .item .desc
+    {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-left: 0;
+    }
 }
