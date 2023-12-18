@@ -6,8 +6,11 @@
     <title>Reviews</title>
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/reviews.css">
+    <!--Облегчает многие стандартные задачи JavaScript, такие как обход и манипулирование DOM, анимации и обработка событий-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!--Строка подключает файл стилей для библиотеки Toastr-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!--Строка подключает файл JavaScript для библиотеки Toastr-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script defer src="../script/reviews.js"></script>
     <script	defer src="../script/mobile-menu.js"></script>
@@ -63,6 +66,17 @@
         </nav>
     </header>
 
-    <div class="clients-reviews"></div>
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="clients-reviews" id="commentsWrapper">
+        <template id="commentTemplate">
+            <div class="comment-person">
+                <div class="comment-name">Имя: <span class="comment-name-value"></span></div>
+                <div class="comment-body">Комментарий: <span class="comment-body-value"></span></div>
+            </div>
+        </template>
+    </div>
 </body>
 </html>
