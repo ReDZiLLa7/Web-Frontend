@@ -1,0 +1,16 @@
+.clients-reviews
+{
+    margin: 2rem 2.5rem 1rem;
+}
+
+.comment-person
+{
+    border: 1px solid rgb(180, 17, 70, 0.5);
+    margin: 0 0 1rem;
+    padding: 1rem;
+}
+
+.comment-name
+{
+    margin: 0 0 1rem;
+}
